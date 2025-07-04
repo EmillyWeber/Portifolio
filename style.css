@@ -313,7 +313,7 @@ button:focus {
 .hero-aria,
 .hero-area-slids,
 .single-slider {
-    height: 100%;
+    height: 80%;
     position: relative;
     z-index: 1;
     background-position: center;
