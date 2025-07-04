@@ -14,3 +14,19 @@
       return false;
     });
   });
+
+  function trocarH2porH3() {
+    if (window.innerWidth <= 1366) {
+      const heroArea = document.querySelector('.hero-aria h2');
+      if (heroArea && heroArea.tagName === 'H2') {
+        const h3 = document.createElement('h3');
+        h3.innerHTML = heroArea.innerHTML;
+        h3.className = heroArea.className;
+        h3.style.cssText = heroArea.style.cssText;
+        heroArea.parentNode.replaceChild(h3, heroArea);
+      }
+    }
+  }
+
+  window.addEventListener('load', trocarH2porH3);
+  window.addEventListener('resize', trocarH2porH3);

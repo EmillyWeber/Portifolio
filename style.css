@@ -341,18 +341,27 @@ button:focus {
 }
 
 /* Ajuste para telas de notebook (até 1366px) */
-@media (max-width: 1366px) and (min-width: 992px) {
+@media (max-width: 1600px) {
     .hero-aria {
-        padding-top: 90px; /* espaço extra para o header */
+        padding-top: 45px; /* espaço extra para o header */
         height: 90vh; /* altura um pouco menor para se ajustar à tela */
     }
 
     .hero-aria h2 {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         padding: 0 30px;
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.5rem;
     }
 }
 
+@media (max-width: 1366px) {
+ .hero-aria h3 {
+  color: white !important;
+    }
+}
 
 .slider-bg {
     height: 100%;
