@@ -313,7 +313,7 @@ button:focus {
 .hero-aria,
 .hero-area-slids,
 .single-slider {
-    height: 80%;
+    height: 100%;
     position: relative;
     z-index: 1;
     background-position: center;
@@ -339,6 +339,20 @@ button:focus {
 .hero-area-slids .owl-item {
     height: 100%;
 }
+
+/* Ajuste para telas de notebook (até 1366px) */
+@media (max-width: 1366px) and (min-width: 992px) {
+    .hero-aria {
+        padding-top: 90px; /* espaço extra para o header */
+        height: 90vh; /* altura um pouco menor para se ajustar à tela */
+    }
+
+    .hero-aria h2 {
+        font-size: 1.8rem;
+        padding: 0 30px;
+    }
+}
+
 
 .slider-bg {
     height: 100%;
