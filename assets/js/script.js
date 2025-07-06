@@ -30,7 +30,7 @@
     h3.className   = currentHeading.className;
     h3.style.cssText = currentHeading.style.cssText;
     heroArea.replaceChild(h3, currentHeading);
-
+//Modificacao
   // Se for >1366 e for H3, troca para H2
   } else if (window.innerWidth > 1366 && currentHeading.tagName === 'H3') {
     const h2 = document.createElement('h2');
