@@ -16,17 +16,30 @@
   });
 
   function trocarH2porH3() {
-    if (window.innerWidth <= 1366) {
-      const heroArea = document.querySelector('.hero-aria h2');
-      if (heroArea && heroArea.tagName === 'H2') {
-        const h3 = document.createElement('h3');
-        h3.innerHTML = heroArea.innerHTML;
-        h3.className = heroArea.className;
-        h3.style.cssText = heroArea.style.cssText;
-        heroArea.parentNode.replaceChild(h3, heroArea);
-      }
-    }
+  const heroArea = document.querySelector('.hero-aria');
+  if (!heroArea) return;
+
+  // Pega o elemento atual, seja h2 ou h3
+  const currentHeading = heroArea.querySelector('h2, h3');
+  if (!currentHeading) return;
+
+  // Se for ≤1366 e for H2, troca para H3
+  if (window.innerWidth <= 1366 && currentHeading.tagName === 'H2') {
+    const h3 = document.createElement('h3');
+    h3.innerHTML   = currentHeading.innerHTML;
+    h3.className   = currentHeading.className;
+    h3.style.cssText = currentHeading.style.cssText;
+    heroArea.replaceChild(h3, currentHeading);
+
+  // Se for >1366 e for H3, troca para H2
+  } else if (window.innerWidth > 1366 && currentHeading.tagName === 'H3') {
+    const h2 = document.createElement('h2');
+    h2.innerHTML     = currentHeading.innerHTML;
+    h2.className     = currentHeading.className;
+    h2.style.cssText = currentHeading.style.cssText;
+    heroArea.replaceChild(h2, currentHeading);
   }
+}
 
   function openVideo(button) {
     // Pega o caminho do vídeo do atributo data-video
