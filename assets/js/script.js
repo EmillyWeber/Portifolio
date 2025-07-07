@@ -38,6 +38,12 @@
     h2.className     = currentHeading.className;
     h2.style.cssText = currentHeading.style.cssText;
     heroArea.replaceChild(h2, currentHeading);
+  } else if (width >= 501 && width <= 1024 && currentHeading.tagName === 'H2') {
+    const h3 = document.createElement('h3');
+    h3.innerHTML   = currentHeading.innerHTML;
+    h3.className   = currentHeading.className;
+    h3.style.cssText = currentHeading.style.cssText;
+    heroArea.replaceChild(h3, currentHeading);
   }
 }
 
